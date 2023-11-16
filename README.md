@@ -1,3 +1,7 @@
+---
+theme: apple-basic
+---
+
 # Apresentação
 
 ### Author
