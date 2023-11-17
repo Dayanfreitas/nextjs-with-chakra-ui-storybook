@@ -1,5 +1,9 @@
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
 
-export default function AtomButton() {
-  return <Button colorScheme='brand'>Button</Button>
+type AtomButtonProps = {
+  label?: string
+}
+
+export default function AtomButton({ label = 'Button' }: AtomButtonProps) {
+  return <Button colorScheme='brand'>{label}</Button>
 }

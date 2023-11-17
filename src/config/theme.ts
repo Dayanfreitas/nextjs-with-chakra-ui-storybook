@@ -10,6 +10,14 @@ const customTheme = {
     },
   },
   components: {
+    Text: {
+      variants: {
+        sm: {
+          fontSize: '10px',
+          color: '#1C274C'
+        }
+      }
+    }
     // Button: {
     //   // 1. We can update the base styles
     //   baseStyle: {
