@@ -1,8 +1,9 @@
 ---
 theme: apple-basic
+title: Twygo - Foco no imutável
 ---
 
-# Apresentação
+# Oi Twygo
 
 ### Author
 
@@ -13,6 +14,7 @@ Profissão: Programador
 Especialidade: Frontend
 
 Inicio: 2008
+
 
 ---
 
