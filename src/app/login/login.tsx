@@ -1,11 +1,10 @@
-import TemplateMain from '@/app/template/template-main'
-import React from 'react'
+import TemplateAuth from '@/app/template/template-auth'
 
 
 export default function Login() {
   return (
-    <TemplateMain>
+    <TemplateAuth>
       <div>Hello Login</div>
-    </TemplateMain>
+    </TemplateAuth>
   )
 }

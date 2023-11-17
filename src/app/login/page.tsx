@@ -1,11 +1,12 @@
 import AtomButton from '@/components/Atoms/Button'
+import TemplateAuth from '@/app/template/template-auth'
 
 export default function Login() {
   return (
     <main>
       <AtomButton />
       {/*
-      <TemplateAutenticacao>
+      <TemplateAuth>
         <AtomImagem src="/img/logo.png" />
         <h1>Welcome Back!</h1>
         <p>Login to your account</p>
@@ -18,7 +19,7 @@ export default function Login() {
         </OrganismoLoginForm>
 
         <p>Don’t have an account? <AtomLink label="Register Now!" /></p>
-      </TemplateAutenticacao>
+      </TemplateAuth>
       */}
     </main>
   )

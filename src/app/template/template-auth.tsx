@@ -4,6 +4,6 @@ type MainProps = {
   children: ReactNode
 }
 
-export default function TemplateMain(props: MainProps) {
+export default function TemplateAuth(props: MainProps) {
   return (<>{ props.children }</>)
 }
