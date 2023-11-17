@@ -1,8 +1,11 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import TemplateMain from '@/app/template/template-main'
+import React from 'react'
+
 
 export default function Login() {
   return (
-    <div>Hello Login</div>
+    <TemplateMain>
+      <div>Hello Login</div>
+    </TemplateMain>
   )
 }
