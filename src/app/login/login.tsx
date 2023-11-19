@@ -3,17 +3,24 @@ import AtomLink from '@/components/Atoms/Link'
 
 import TemplateAuth from '@/app/template/template-auth'
 
-import { Flex, Text, Heading, Divider, Input } from '@chakra-ui/react'
-import { FormControl, FormLabel, Checkbox } from '@chakra-ui/react'
+import { Flex, Text, Heading, Divider, Input, Spacer } from '@chakra-ui/react'
+import { FormControl, FormLabel, Checkbox, Box } from '@chakra-ui/react'
 
 import AtomImagem from '@/components/Atoms/Imagem'
 import OrganismsLoginForm from '@/components/Organisms/Login'
 
+export function Slot({ children }: { children: React.ReactNode }) {
+  return (
+    <Flex p={10} justifyContent={'center'}>
+      {children}
+    </Flex>
+  )
+}
 
 
 export function Header({ children }: { children: React.ReactNode }) {
   return (
-    <Flex position={'fixed'} bottom={2} justifyContent={'center'} w="full">
+    <Flex alignItems={'center'} direction={'column'} w='full' mt={10} gap={2}>
       {children}
     </Flex>
   )
@@ -22,26 +29,33 @@ export function Header({ children }: { children: React.ReactNode }) {
 
 export function Footer({ children }: { children: React.ReactNode }) {
   return (
-    <Flex position={'fixed'} bottom={2} justifyContent={'center'} w="full">
-      {/* <Divider mt={2} /> */}
-      {children}
-    </Flex>
+    <Flex
+      w="full"
+      left={0}
+      bottom={2}
+      direction={'column'} 
+      position={'fixed'}
+      alignItems={'center'}>
+      <Divider mt={2} />
+        {children}
+    </Flex>    
   )
 }
 
 export default function Login() {
   return (
-    <TemplateAuth>
+    <TemplateAuth> 
+      <Box height={12} />
 
-      <Flex alignItems={'center'} direction={'column'} w='full' mt={10} gap={2}>
-        <AtomImagem />
+      <Header>
+        <AtomImagem src={'/img/Logo.png'} alt='logo do site' />
         <Heading as='h1'>Welcome Back!</Heading>
         <Text textShadow={'0px 4px 4px rgba(0, 0, 0, 0.25)'}>Login to your account</Text>
-      </Flex>
+      </Header>
 
       <Divider mt={2} />
 
-      <Flex w='full' pl={10} pr={10} pt={4}>
+      <Flex w='full' pl={10} pr={10}>
         <OrganismsLoginForm>
           <FormControl variant={'custom'}>
             <FormLabel>Enter Your Email</FormLabel>
@@ -79,6 +93,10 @@ export default function Login() {
 
         </OrganismsLoginForm>
       </Flex>
+
+      <Slot>
+        <AtomImagem alt={'unsuccessful feedback'} src={'/img/unsuccessful-state-feedback.png'} />        
+      </Slot>
 
       <Footer>
         <Text variant={'sm'} p={4}>

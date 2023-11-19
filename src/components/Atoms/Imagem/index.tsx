@@ -1,13 +1,15 @@
 import { Image } from '@chakra-ui/react'
 
 type AtomImagem = {
+  src: string
+  alt: string
 }
 
-export default function AtomImagem() {
-  return <Image
-    borderRadius='full'
-    boxSize='150px'
-    src='https://bit.ly/dan-abramov'
-    alt='Dan Abramov'
-  />
+export default function AtomImagem({ src, alt }: {src: string, alt: string}) {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+    />
+  )
 }
