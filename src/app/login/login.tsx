@@ -11,7 +11,7 @@ import OrganismsLoginForm from '@/components/Organisms/Login'
 
 export function Slot({ children }: { children: React.ReactNode }) {
   return (
-    <Flex p={10} justifyContent={'center'}>
+    <Flex justifyContent={'center'}>
       {children}
     </Flex>
   )
@@ -44,9 +44,7 @@ export function Footer({ children }: { children: React.ReactNode }) {
 
 export default function Login() {
   return (
-    <TemplateAuth> 
-      <Box height={12} />
-
+    <TemplateAuth>
       <Header>
         <AtomImagem src={'/img/Logo.png'} alt='logo do site' />
         <Heading as='h1'>Welcome Back!</Heading>
