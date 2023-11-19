@@ -1,4 +1,4 @@
-import { Button, Image } from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
 
 type AtomImagem = {
 }

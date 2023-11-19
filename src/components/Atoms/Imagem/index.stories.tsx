@@ -1,19 +1,18 @@
-import Button from './index'
+import AtomImagem from './index'
 import type { StoryObj } from '@storybook/react'
 
 const defaultModule = {
-  title: 'DesignSystem/Atom/Button',
-  component: Button,
+  title: 'DesignSystem/Atom/Image',
+  component: AtomImagem,
   argTypes: {},
 }
 
 export default defaultModule
 
-type Story = StoryObj<typeof Button>
+type Story = StoryObj<typeof AtomImagem>
 
 export const Primary: Story = {
   args: {
-    label: 'Primary',
-    variant: 'primary'
+
   },
 }

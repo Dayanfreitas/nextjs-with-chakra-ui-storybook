@@ -53,7 +53,7 @@ export default function Login() {
             <Input type='email' />
           </FormControl>
 
-          <Flex justifyContent={'space-between'}>
+          <Flex justifyContent={'space-between'} mt={2}>
             <Checkbox defaultChecked>
               Remember Me
             </Checkbox>
