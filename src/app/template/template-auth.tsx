@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 
 type MainProps = {
@@ -5,5 +6,5 @@ type MainProps = {
 }
 
 export default function TemplateAuth(props: MainProps) {
-  return (<>{ props.children }</>)
+  return (<Box pl={3} pr={3}>{ props.children }</Box>)
 }
