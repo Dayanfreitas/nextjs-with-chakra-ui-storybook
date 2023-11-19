@@ -1,3 +1,4 @@
+// import '@fontsource-variable/outfit';
 import { StyleFunctionProps, extendTheme } from '@chakra-ui/react'
 
 const customTheme = {
@@ -10,6 +11,10 @@ const customTheme = {
     },
   },
   components: {
+    fonts: {
+      heading: 'Outfit, sans-serif',
+      body: 'Outfit, sans-serif',
+    },
     Text: {
       variants: {
         sm: {
@@ -17,7 +22,25 @@ const customTheme = {
           color: '#1C274C'
         }
       }
-    }
+    },
+    Form: {
+      variants: {
+        custom: {
+        }  
+      }
+    },
+    Button: {
+      variants: {
+        primary: {
+          bg: '#FFCB00',
+          borderRadius: '10rem',
+          color: 'white',
+          _hover: {
+            opacity: 0.8,
+          }
+        }
+      }
+    },
     // Button: {
     //   // 1. We can update the base styles
     //   baseStyle: {

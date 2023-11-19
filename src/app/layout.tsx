@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Outfit } from 'next/font/google'
 import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ['latin'] })
+const outfit = Outfit({  weight: '400', subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}>
+      <body className={outfit.className} suppressHydrationWarning={true}>
         <Providers>
           {children}
         </Providers>
