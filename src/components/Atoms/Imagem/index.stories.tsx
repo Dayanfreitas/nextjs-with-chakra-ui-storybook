@@ -13,6 +13,7 @@ type Story = StoryObj<typeof AtomImagem>
 
 export const Primary: Story = {
   args: {
-
+    src: '/img/Logo.png',
+    alt: 'Logo do site',
   },
 }
