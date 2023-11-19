@@ -41,6 +41,13 @@ const customTheme = {
         }
       }
     },
+    Link: {
+      variants: {
+        primary: {
+          color: '#FFCB00',
+        }
+      }
+    },
     // Button: {
     //   // 1. We can update the base styles
     //   baseStyle: {

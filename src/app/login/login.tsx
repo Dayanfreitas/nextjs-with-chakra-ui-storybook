@@ -1,4 +1,6 @@
 import AtomButton from '@/components/Atoms/Button'
+import AtomLink from '@/components/Atoms/Link'
+
 import TemplateAuth from '@/app/template/template-auth'
 
 import { Flex, Text, Heading, Divider, Input } from '@chakra-ui/react'
@@ -29,10 +31,10 @@ export function Footer({ children }: { children: React.ReactNode }) {
 export default function Login() {
   return (
     <TemplateAuth>
-      <Flex alignItems={'center'} direction={'column'} w='full' mt={10}>
+      <Flex alignItems={'center'} direction={'column'} w='full' mt={10} gap={2}>
         <AtomImagem />
         <Heading as='h1'>Welcome Back!</Heading>
-        <Text variant={'sm'}>Login to your account</Text>
+        <Text textShadow={'0px 4px 4px rgba(0, 0, 0, 0.25)'}>Login to your account</Text>
 
         <Flex w={'90%'}>
           <Divider mt={2} />
@@ -51,16 +53,24 @@ export default function Login() {
             <Input type='email' />
           </FormControl>
 
-          <Flex>
-            <Checkbox defaultChecked>Checkbox</Checkbox>
-            Remember Me
-
-            Recover Password
+          <Flex justifyContent={'space-between'}>
+            <Checkbox defaultChecked>
+              Remember Me
+            </Checkbox>
+           
+            <AtomLink variant='unstyle' color="#413B89">
+              Recover Password
+            </AtomLink>
           </Flex>
 
-          <Flex w="full" mt={2}>
+          <Flex w="full" direction="column" mt={2} alignItems="center">
             <AtomButton height={'4rem'} label='Login' w="full" variant="primary" />
+
+            <Text mt={2}>
+              Don’t have an account? <AtomLink variant="primary">Register Now!</AtomLink>
+            </Text>
           </Flex>
+
         </OrganismsLoginForm>
       </Flex>
 
