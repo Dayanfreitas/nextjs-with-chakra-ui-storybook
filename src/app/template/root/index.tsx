@@ -23,15 +23,8 @@ export function Footer({ children }: { children: React.ReactNode }) {
 
 export default function TemplateRoot({ children }: RootTemplateProsps) {
   return (
-    <Flex direction={'column'}>
+    <Flex direction={{base: 'column', md: 'row'}} height={'100vh'}>
       { children }
-
-      <Footer>
-        <Text variant={'sm'} p={4}>
-          © 2023 GrowthX. All Rights Reserved. <br />
-          Designed, Built & Maintained by Sid*
-        </Text>
-      </Footer>
     </Flex>
   )
 }

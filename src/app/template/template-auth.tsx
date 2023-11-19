@@ -7,10 +7,10 @@ type MainProps = {
 
 export default function TemplateAuth(props: MainProps) {
   return (
-    <Flex 
-      pl={3}
-      pr={3}
-      height={'100vh'}
+    <Flex
+      pl={{ base: 3, md: '185px'}}
+      pr={{ base: 3, md: '185px'}}
+      pt={{base: 0, md: '121px' }}
       direction={'column'}>
         { props.children }
     </Flex>

@@ -77,11 +77,6 @@ export default function Login() {
 
         </OrganismsLoginForm>
       </Flex>
-
-      <Slot>
-        <AtomImagem alt={'unsuccessful feedback'} src={'/img/unsuccessful-state-feedback.png'} />        
-      </Slot>
-
     </TemplateAuth>    
   )
 }
