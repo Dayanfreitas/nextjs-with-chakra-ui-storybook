@@ -9,14 +9,6 @@ import { FormControl, FormLabel, Checkbox, Box } from '@chakra-ui/react'
 import AtomImagem from '@/components/Atoms/Imagem'
 import OrganismsLoginForm from '@/components/Organisms/Login'
 
-export function Slot({ children }: { children: React.ReactNode }) {
-  return (
-    <Flex justifyContent={'center'}>
-      {children}
-    </Flex>
-  )
-}
-
 
 export function Header({ children }: { children: React.ReactNode }) {
   return (
@@ -27,18 +19,12 @@ export function Header({ children }: { children: React.ReactNode }) {
 }
 
 
-export function Footer({ children }: { children: React.ReactNode }) {
+
+export function Slot({ children }: { children: React.ReactNode }) {
   return (
-    <Flex
-      w="full"
-      left={0}
-      bottom={2}
-      direction={'column'} 
-      position={'fixed'}
-      alignItems={'center'}>
-      <Divider mt={2} />
-        {children}
-    </Flex>    
+    <Flex justifyContent={'center'}>
+      {children}
+    </Flex>
   )
 }
 
@@ -69,7 +55,7 @@ export default function Login() {
             <Checkbox defaultChecked>
               Remember Me
             </Checkbox>
-           
+
             <AtomLink variant='unstyle' color="#413B89">
               Recover Password
             </AtomLink>
@@ -96,12 +82,6 @@ export default function Login() {
         <AtomImagem alt={'unsuccessful feedback'} src={'/img/unsuccessful-state-feedback.png'} />        
       </Slot>
 
-      <Footer>
-        <Text variant={'sm'} p={4}>
-          © 2023 GrowthX. All Rights Reserved. <br />
-          Designed, Built & Maintained by Sid*
-        </Text>
-      </Footer>
-    </TemplateAuth>
+    </TemplateAuth>    
   )
 }

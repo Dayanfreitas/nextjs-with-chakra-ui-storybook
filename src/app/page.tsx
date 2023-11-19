@@ -1,11 +1,12 @@
-import AtomButton from '@/components/Atoms/Button'
-
 import Login from '@/app/login/login'
+import TemplateRoot from './template/root'
 
 export default function Home() {
   return (
     <main>
-      <Login />
+      <TemplateRoot>
+        <Login />
+      </TemplateRoot>
     </main>
   )
 }
