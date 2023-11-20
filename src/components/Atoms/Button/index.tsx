@@ -1,5 +1,11 @@
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button, ButtonProps, HTMLChakraProps } from '@chakra-ui/react'
 
-export default function AtomButton() {
-  return <Button colorScheme='blue'>Button</Button>
+interface AtomButtonProps extends HTMLChakraProps<'button'>, ButtonProps
+{
+  label: string
+  variant?: ButtonProps['variant']
+}
+
+export default function AtomButton({ label, ...rest}: AtomButtonProps) {
+  return <Button {...rest}>{label}</Button>
 }
