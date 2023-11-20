@@ -2,7 +2,7 @@ import Login from '@/app/login/login'
 import TemplateRoot from './template/root'
 import { Box } from '@chakra-ui/react'
 import { Flex, Text, Divider } from '@chakra-ui/react'
-import AtomImagem from '@/components/Atoms/Imagem'
+import AtomImagem, { AtomImagemWithSize } from '@/components/Atoms/Imagem'
 
 
 export function Footer({ children }: { children: React.ReactNode }) {
@@ -34,10 +34,12 @@ export default function Home() {
       <TemplateRoot>
         <Box order={{base: 2, md: 1}} w={{base: '100%', md: "50%"}}>
           <ImageContainer>
-            <AtomImagem 
-              src={'/img/unsuccessful-state-feedback.png'}
+            <AtomImagemWithSize 
+              src={'/img/feedback.png'}
               alt={'unsuccessful feedback'}
-              />        
+              width={{base: '210px', md: '1920px'}}
+              height={{base: '150px', md: '820px'}}
+            />   
           </ImageContainer>
         </Box>
 
